@@ -15,14 +15,8 @@ Files
 - `js/app.js` — note logic (save/load/search/export/import)
 
 Workflow additions
-- To add a finished note file (without modification) into the site and record its concept in the README, use the script `scripts/add_note.py`.
 
-README auto-update markers
-- The README contains two special markers the script uses to append notes and concepts:
-	- `<!-- NOTES_LIST -->`
-	- `<!-- CONCEPTS -->`
-
-Rule: after any site update, the README should be updated with a short changelog entry (date and description). The script will also append note entries and concepts when you add notes with it.
+Rule: after any site update, the README should be updated with a short changelog entry (date and description).
 
 Preview locally
 1. In a terminal, start a simple static server from the project root:
