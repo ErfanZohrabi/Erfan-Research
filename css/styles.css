@@ -1,6 +1,6 @@
 * { box-sizing: border-box; }
 body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin: 0; color: #111; }
-.topbar { background:#0b6efd; color:#fff; padding:12px 16px; font-weight:600; }
+.topbar { background: linear-gradient(90deg,#2b0637 0%, #3f004d 100%); color:#fff; padding:18px 24px; font-weight:600; }
 .topbar .topbar-inner{ display:flex; align-items:center; justify-content:space-between; max-width:1100px; margin:0 auto; }
 .topbar .brand{ font-weight:700; }
 .topbar .topnav a{ color:#fff; margin-left:12px; text-decoration:none; font-weight:600; }
@@ -25,3 +25,36 @@ button { padding:6px 10px; border-radius:6px; border:1px solid #cfd8e3; backgrou
 .news-article h1{ margin-top:0; font-size:20px; }
 .news-article .meta{ color:#666; font-size:13px; margin-bottom:14px; }
 .news-article section{ margin-bottom:14px; }
+
+/* Magazine-style landing */
+body{ background: radial-gradient(1200px 400px at 10% 10%, rgba(192,126,255,0.12), transparent 8%), radial-gradient(1000px 400px at 95% 90%, rgba(255,130,180,0.06), transparent 8%), #140417; color:#eee; }
+.hero-wrap{ max-width:1100px; margin:28px auto; padding:24px; }
+.hero{ display:flex; gap:28px; align-items:center; }
+.hero-media{ flex:1 1 55%; position:relative; overflow:hidden; border-radius:18px; }
+.hero-slide{ position:absolute; inset:0; background-size:cover; background-position:center; transition:opacity 1s ease; opacity:0; }
+.hero-slide:first-child{ opacity:1; }
+.hero-body{ flex:1 1 45%; }
+.hero .meta{ color:#f0d8ff; opacity:0.95; font-size:13px; margin-bottom:8px; }
+.hero h1{ font-size:42px; line-height:1.02; margin:0 0 12px; color:#fff; font-family: 'Georgia', 'Times New Roman', serif; }
+.hero .lead{ color:rgba(255,255,255,0.85); margin-bottom:16px; }
+.cta{ display:inline-block; background:#ff4fa6; color:#fff; padding:10px 18px; border-radius:28px; text-decoration:none; font-weight:700; }
+
+.cards{ display:grid; grid-template-columns: repeat(3,1fr); gap:18px; margin-top:28px; }
+.card{ background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:14px; border-radius:12px; }
+.card-image{ width:100%; padding-top:60%; border-radius:8px; background-image: linear-gradient(135deg,#b36bff,#ff8fb3); margin-bottom:12px; }
+.card h3{ color:#fff; font-size:16px; margin:0 0 8px; }
+.card-meta{ color:#d6b7e6; font-size:12px; }
+
+@media (max-width:900px){ .hero{ flex-direction:column; } .cards{ grid-template-columns:1fr; } .hero h1{ font-size:28px; } }
+
+/* Note page two-column layout */
+/* replace previous news-article styles with two-column layout */
+.note-layout{ max-width:1200px; margin:24px auto; display:grid; grid-template-columns:240px 1fr 320px; gap:24px; align-items:start; }
+.note-side{ background: linear-gradient(180deg,#fff0, rgba(255,100,60,0.06)); padding:20px; border-radius:12px; color:#111; }
+.note-main{ background:#fff8f5; padding:28px; border-radius:8px; color:#1a1a1a; }
+.note-image{ width:100%; height:100%; border-radius:12px; background-size:cover; background-position:center; }
+.note-title{ font-family: 'Georgia', serif; font-size:44px; margin:6px 0 12px; }
+.note-meta{ color:#6b5b5b; margin-bottom:14px; }
+.note-content p{ line-height:1.7; color:#3b3b3b; }
+
+@media (max-width:1000px){ .note-layout{ grid-template-columns:1fr; } .note-image{ height:220px; } }
