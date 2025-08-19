@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>research</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">research</div>
+      <nav class="topnav">
+        <a href="index.html">Home</a>
+        <a href="note.html">Note</a>
+      </nav>
+    </div>
+  </header>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="sidebar-controls">
+        <button id="newBtn">New</button>
+        <input id="search" placeholder="Search notes" />
+      </div>
+      <ul id="notesList" class="notes-list"></ul>
+    </aside>
+
+    <main class="editor">
+      <input id="title" class="title" placeholder="Note title" />
+      <textarea id="content" class="content" placeholder="Write your notes here..."></textarea>
+
+      <div class="actions">
+        <button id="saveBtn">Save</button>
+        <button id="deleteBtn">Delete</button>
+        <button id="exportBtn">Export JSON</button>
+        <button id="importBtn">Import JSON</button>
+        <input type="file" id="importFile" accept="application/json" style="display:none" />
+        <label class="preview-toggle"><input type="checkbox" id="previewToggle" /> Preview</label>
+      </div>
+
+      <div id="preview" class="preview" aria-live="polite"></div>
+    </main>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
